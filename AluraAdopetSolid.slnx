@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Alura.Adopet.API/Alura.Adopet.API.csproj" />
+    <Project Path="src/Alura.Adopet.Console/Alura.Adopet.Console.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Alura.Adopet.Testes/Alura.Adopet.Testes.csproj" />
+  </Folder>
+</Solution>
