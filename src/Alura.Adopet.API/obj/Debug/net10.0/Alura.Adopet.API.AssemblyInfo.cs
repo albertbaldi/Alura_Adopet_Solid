@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Alura.Adopet.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e195bfe2e54dfef4bb2975ad25acf08e6f49177")]
 [assembly: System.Reflection.AssemblyProductAttribute("Alura.Adopet.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Alura.Adopet.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
