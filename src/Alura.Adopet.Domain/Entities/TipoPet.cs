@@ -1,6 +1,6 @@
 using System;
 
-namespace Alura.Adopet.API.Domain;
+namespace Alura.Adopet.Domain.Entities;
 
 public enum TipoPet
 {

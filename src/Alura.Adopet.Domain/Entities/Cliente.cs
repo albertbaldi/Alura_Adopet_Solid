@@ -1,11 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Alura.Adopet.API.Domain;
+namespace Alura.Adopet.Domain.Entities;
 
-public class Pet
+public class Cliente
 {
-    public Pet()
+    public Cliente()
     {
         Id = Guid.NewGuid();
     }
@@ -13,5 +13,6 @@ public class Pet
     [Key]
     public Guid Id { get; set; }
     public string Nome { get; set; }
-    public TipoPet TipoPet { get; set; }
+    public string CPF { get; set; }
+    public string Email { get; set; }
 }
