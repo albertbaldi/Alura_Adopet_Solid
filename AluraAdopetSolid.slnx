@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/Alura.Adopet.API/Alura.Adopet.API.csproj" />
     <Project Path="src/Alura.Adopet.Console/Alura.Adopet.Console.csproj" />
+    <Project Path="src/Alura.Adopet.Domain/Alura.Adopet.Domain.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Alura.Adopet.Testes/Alura.Adopet.Testes.csproj" />

@@ -16,14 +16,17 @@ builder.Services.AddScoped<IEventoService, EventoService>()
 }
 );
 
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var serviceProvider = builder.Services.BuildServiceProvider();
-var eventoService = serviceProvider.GetService<IEventoService>();
-
 var app = builder.Build();
-eventoService.GenerateFakeData();
+
+using (var scope = app.Services.CreateScope())
+{
+    var eventoService = scope.ServiceProvider.GetRequiredService<IEventoService>();
+    eventoService.GenerateFakeData();
+}
 
 app.UseSwagger();
 app.UseSwaggerUI();

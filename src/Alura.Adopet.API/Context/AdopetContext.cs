@@ -1,5 +1,5 @@
 using System;
-using Alura.Adopet.API.Domain;
+using Alura.Adopet.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Alura.Adopet.API.Context;

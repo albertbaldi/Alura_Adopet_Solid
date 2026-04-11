@@ -1,6 +1,6 @@
 using System;
 using Alura.Adopet.API.Context;
-using Alura.Adopet.API.Domain;
+using Alura.Adopet.Domain.Entities;
 
 namespace Alura.Adopet.API.Services;
 
@@ -29,5 +29,6 @@ public class EventoService : IEventoService
             TipoPet = TipoPet.Cachorro
         };
         _context.Add(pet);
+        _context.SaveChanges();
     }
 }
