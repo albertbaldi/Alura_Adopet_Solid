@@ -17,17 +17,22 @@ public static class ComandosFactory
         switch (comando)
         {
             case "import":
-                var httpClientPet = new HttpClientPet(new AdopetAPIClientFactory().CreateClient("adopet"));
-                var leitorDeArquivos = new LeitorDeArquivo(args[1]);
+                var httpClientPet = new PetService(new AdopetAPIClientFactory().CreateClient("adopet"));
+                var leitorDeArquivos = LeitorDeArquivoFactory.CreateLeitorDePet(args[1]);
                 if (leitorDeArquivos is null) { return null; }
                 return new Import(httpClientPet, leitorDeArquivos);
 
+            case "import-cliente":
+                var httpClientCliente = new ClienteService(new AdopetAPIClientFactory().CreateClient("adopet"));
+                var leitorDeArquivosCliente = LeitorDeArquivoFactory.CreateLeitorDeCliente(args[1]);
+                if (leitorDeArquivosCliente is null) { return null; }
+                return new ImportCliente(httpClientCliente, leitorDeArquivosCliente);
             case "list":
-                var httpClientPetList = new HttpClientPet(new AdopetAPIClientFactory().CreateClient("adopet"));
+                var httpClientPetList = new PetService(new AdopetAPIClientFactory().CreateClient("adopet"));
                 return new List(httpClientPetList);
 
             case "show":
-                var leitorDeArquivosShow = new LeitorDeArquivo(args[1]);
+                var leitorDeArquivosShow = LeitorDeArquivoFactory.CreateLeitorDePet(args[1]);
                 if (leitorDeArquivosShow is null) { return null; }
                 return new Show(leitorDeArquivosShow);
 
