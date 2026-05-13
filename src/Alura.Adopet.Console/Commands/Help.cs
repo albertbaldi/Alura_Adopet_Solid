@@ -1,13 +1,13 @@
-using System;
-using System.Reflection;
 using Alura.Adopet.Console.Attributes;
 using Alura.Adopet.Console.Interfaces;
 using Alura.Adopet.Console.Results;
 using Alura.Adopet.Console.Util;
 using FluentResults;
+using System.Reflection;
 
 namespace Alura.Adopet.Console.Commands;
 
+[DocComando("help", "Adopet help [COMANDO] - exibe a ajuda dos comandos do sistema.")]
 public class Help : IComando
 {
     private Dictionary<string, DocComandoAttribute> docs;
